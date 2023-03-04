@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Моя мечта</title>
+    <link rel="shortcut icon" href="Flag_of_the_United_Kingdom_(1-2).svg.png" type="image/x-icon">
+    <link rel="stylesheet" href="london.css">
+</head>
+<body>
+        <div class="kvadrat_2">
+            </div>
+            <b><a href="london2.html">London</a></b>
+            <div class="slideshow-container">
+
+                <div class="mySlides fade">
+                  <div class="numbertext">1 / 3</div>
+                  <img src="big-ben-1.jpg" alt="" style="width:500px" style="height:400px">
+                  <div class="text">Биг-Бен</div>
+                </div>
+                
+                <div class="mySlides fade">
+                  <div class="numbertext">2 / 3</div>
+                  <img src="London-5-Buckingham_Palace-e1508834319103.jpg" alt="" style="width:500px" style="height:400px">
+                  <div class="text">Букингемский дворец</div>
+                </div>
+                
+                <div class="mySlides fade">
+                  <div class="numbertext">3 / 3</div>
+                  <img src="London-4-Tower_Bridge-e1508833674554.jpg" alt="" style="width:500px;" style="height:400px" >
+                  <div class="text">Тауэрский мост</div>
+                </div>
+                
+                </div>
+                <br>
+                
+                <div style="text-align:center">
+                  <span class="dot"></span> 
+                  <span class="dot"></span> 
+                  <span class="dot"></span> 
+                </div>
+                
+                <script>
+                var slideIndex = 0;
+                showSlides();
+                
+                function showSlides() {
+                  var i;
+                  var slides = document.getElementsByClassName("mySlides");
+                  var dots = document.getElementsByClassName("dot");
+                  for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";  
+                  }
+                  slideIndex++;
+                  if (slideIndex > slides.length) {slideIndex = 1}    
+                  for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                  }
+                  slides[slideIndex-1].style.display = "block";  
+                  dots[slideIndex-1].className += " active";
+                  setTimeout(showSlides, 2000); // Меняйте изображение каждые 2 секунды
+                }
+                </script>    
+       </body>
+</html>
